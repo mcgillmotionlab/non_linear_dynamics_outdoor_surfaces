@@ -17,7 +17,7 @@
 \begin{frontmatter}
 
 %TC:ignore
-\title{Gait dynamics are affected by commonly occurring outdoor surfaces in healthy adults}
+\title{Gait dynamics are affected by commonly occurring outdoor surfaces and sex in healthy adults}
 
 % \author[inst1]{Jill Emmerzaal}
 % \author[inst2,inst3]{Patrick Ippersiel}
@@ -49,13 +49,6 @@
 Human bipedal walking requires navigating various terrains, impacting biomechanics and gait dynamics. This study investigates the effects of different outdoor surfaces on gait dynamics in healthy adults, using non-linear dynamics metrics derived from lower trunk accelerations. Thirty participants (14 females, 15 males) walked on seven outdoor surfaces: flat-even, banked right, banked left, cobblestone, grass, sloped down, and sloped up. Data were extracted from the lower back, left, and right shank sensors. Gait dynamics were assessed for movement predictability (sample entropy), smoothness (log dimensionless jerk), symmetry (step and stride regularity), and stability (short- and long-term Lyapunov exponents). Results indicate significant surface effects on all gait dynamics variables, independent of sex. Banked right and sloped down surfaces decreased sample entropy, indicating less predictable movement patterns. All surfaces, except flat-even, increased log dimensionless jerk, suggesting less smooth movements. Cobblestone and sloped down surfaces reduced step symmetry, while banked surfaces improved stride symmetry. Short-term Lyapunov exponent decreased on cobblestones, indicating reduced step-to-step variability, whereas sloped up walking increased it. Long-term Lyapunov exponent increased on all surfaces except cobblestones, indicating more chaotic movement patterns. No significant sex differences were found in gait dynamics; however, males exhibited a non-significant trend towards lower short-term Lyapunov exponent, suggesting less step-to-step variability. Significant interactions between sex and surface were observed for sample entropy and stride symmetry on banked right surfaces, with females showing decreased sample entropy and increased stride symmetry compared to males. This study highlights the importance of considering surface type and sex in gait dynamics research. 
 \end{abstract}
 
-% \begin{highlights}
-%     \item Investigating the impact of outdoor surfaces on walking biomechanics is important with potential implications for injury prevention and rehabilitation
-%     \item Data from lower back accelerations were investigated on seven different, commonly occurring outdoor surfaces in males and females.
-%     \item All surfaces---banked, sloped, and irregular---induce changes in non-linear gait dynamics, independent of sex
-%     \item Females exhibited a significantly higher short term Lyapunov Exponent than males, independent of surface type.
-%     \item Non-linear dynamics on different surface are needed in human movement analysis to fully capture the demands of outdoor walking.
-% \end{highlights}
 
 %% Keywords
 \begin{keyword}
@@ -142,197 +135,7 @@ Model outcomes per dependent variable are reported in Table~\ref{tab:main-effect
 Significant surface effects for all gait dynamics variables ($p \leq 0.05$) were obtained on most surfaces, showing that walking surface impacts gait dynamics, independent of sex.
 Banked right and sloped down surfaces were associated with a significant decrease in sample entropy, reducing complexity. All surfaces significantly increased LDLJ compared to flat walking indicating less smooth movements. Banked right surface significantly increased step symmetry, while cobble stones and sloped down surfaces decreased it. Banked left and banked right surfaces increased stride symmetry, while cobble stones, sloped down, and sloped up surfaces decreased stride symmetry. Cobble stone surface significantly decreased LyE$_{s}$. Sloped up walking was associated with a significant increase in LyE$_{s}$. Indicating that cobble stone surfaces decreased step-to-step variability whereas sloped up walking increased the step-to-step variability. All surfaces significantly increased LyE${_l}$, indicating increased complexity and chaos.
 
-% Sample Entropy: Post-hoc paired t-test showed that compared to flat walking, the sole surface to prompt a change in Sample Entropy was sloped-down. Sample Entropy on sloped-down, relative to flat surfaces, was reduced with a large effect size of $d=0.81$ and suggests a more invariable or predictable gait pattern.
-% \paragraph{Sample Entropy} The GEE model showed that compared to flat walking, banked right ($\beta = -0.05$, $p = 0.04$) and sloped down ($\beta = -0.08$, $p < 0.001$) surfaces were associated with a significant decrease in Sample Entropy. The other surfaces are not statistically significant, indicating no strong evidence of an effect.
-
-% \begin{itemize}
-% \item Main Effect of Surface (Independent of Sex)
-
-% \item The main effect of surface types is captured by the coefficients for the different surface categories, with flat even as the reference category. Here are the interpretations:
-% \begin{itemize}
-%     \item bank left: Coefficient = -0.0394, p-value = 0.144\\
-% This suggests that bank left surfaces are associated with a decrease in SampleEntropyDelay compared to flat even surfaces, but this effect is not statistically significant ($p > 0.05$).
-%     \item bank right: Coefficient = -0.0450, p-value = 0.037\\
-% This indicates that bank right surfaces are associated with a significant decrease in SampleEntropyDelay compared to flat even surfaces ($p < 0.05$).
-%     \item cobble stone: Coefficient = 0.0323, p-value = 0.095\\
-% This suggests that cobble stone surfaces are associated with an increase in SampleEntropyDelay compared to flat even surfaces, but this effect is marginally significant ($p = 0.10$).
-%     \item grass: Coefficient = -0.0105, p-value = 0.645\\
-% This indicates that grass surfaces have a negligible and non-significant effect on SampleEntropyDelay compared to flat even surfaces ($p > 0.05$).
-%     \item slope down: Coefficient = -0.0847, p-value = 0.002\\
-% This shows that slope down surfaces are associated with a significant decrease in SampleEntropyDelay compared to flat even surfaces ($p < 0.05$).
-%     \item slope up: Coefficient = -0.0440, p-value = 0.124\\
-% This suggests that slope up surfaces are associated with a decrease in SampleEntropyDelay compared to flat even surfaces, but this effect is not statistically significant ($p > 0.05$).
-% \end{itemize}
-% \end{itemize}
-% Log dimensionless jerk (LDLJ): Follow up paired t-test showed that compared to flat walking, banked right, cobblestone, grass, and sloped-down surfaces prompted a decrease in LDLJ with medium to large effect sizes ($d=0.45$, $d=0.82$, $d=0.55$, and $d=1.31$ respectively). This suggests a transition toward a less smooth gait on these surface compared to flat walking. 
-
-% \paragraph{LDLJ} Compared to flat walking, all the walking surfaces surfaces, bank left ($\beta = 0.01$, $p = 0.01$), bank right ($\beta = 0.02$, $p < 0.001$), cobble stone ($\beta = 0.03$, $p < 0.001$), grass ($\beta =0.02$, $p < 0.001$), slope down ($\beta = 0.05$, $p < 0.001$), and sloped up ($\beta=0.01$, $p = 0.020$) surfaces significantly increased LDLJ. This shows that these surfaces prompted a less smooth, more jerky movement pattern by 1 to 4.7\%.  
-
-% \begin{itemize}
-%     \item Main Effect of Surface (Independent of Sex)
-
-% \item The main effect of surface types is captured by the coefficients for the different surface categories, with flat even as the reference category. Here are the interpretations:
-% \begin{itemize}
-% \item bank left: Coefficient = 0.0100, p-value = 0.007\\
-% This suggests that bank left surfaces are associated with a significant increase in LDLJ compared to flat even surfaces ($p < 0.05$).
-% \item bank right: Coefficient = 0.0170, p-value = 0.000\\
-% This indicates that bank right surfaces are associated with a significant increase in LDLJ compared to flat even surfaces ($p < 0.05$).
-% \item cobble stone: Coefficient = 0.0274, p-value = 0.000\\
-% This suggests that cobble stone surfaces are associated with a significant increase in LDLJ compared to flat even surfaces ($p < 0.05$).
-% \item grass: Coefficient = 0.0214, p-value = 0.000 \\
-% This indicates that grass surfaces are associated with a significant increase in LDLJ compared to flat even surfaces ($p < 0.05$).
-% \item slope down: Coefficient = 0.0463, p-value = 0.000\\
-% This shows that slope down surfaces are associated with a significant increase in LDLJ compared to flat even surfaces ($p < 0.05$).
-% \item slope up: Coefficient = 0.0127, p-value = 0.020
-% \end{itemize}
-% This suggests that slope up surfaces are associated with a significant increase in LDLJ compared to flat even surfaces ($p < 0.05$).
-% \end{itemize}
-
-% Step symmetry (Step): Post-hoc Wilcoxen-signed rank tests showed that compared to flat walking, cobblestone and sloped-down surfaces prompted reduced step symmetry with a medium effect ($\Delta=0.66$ and $\Delta=0.36$, respectively). No other statistical differences were observed.
-
-% \paragraph{Step symmetry} 
-% Compared to flat even walking, the bank right surface ($\beta=0.02$, $p = 0.01$) significantly increased the step symmetry, whereas cobble stones ($\beta = -0.05$, $p < 0.001)$) and sloped down ($\beta=-0.03$, $p = 0.001$) walking prompted a significant decrease in step symmetry.
-% Other surfaces (bank left, grass, slope down, slope up) did not show significant effects.
-
-
-% \begin{itemize}
-%     \item Main Effect of Surface (Independent of Sex)
-
-% \item The main effect of surface types is captured by the coefficients for the different surface categories, with flat even as the reference category. Here are the interpretations:
-% \begin{itemize}
-% \item bank left: Coefficient = 0.0191, p-value = 0.070\\
-% This suggests that bank left surfaces are associated with an increase in StepSymmetry compared to flat even surfaces, but this effect is marginally significant ($p = 0.07$).
-% \item bank right: Coefficient = 0.0224, p-value = 0.011\\
-% This indicates that bank right surfaces are associated with a significant increase in StepSymmetry compared to flat even surfaces ($p < 0.05$).
-% \item cobble stone: Coefficient = -0.0545, p-value = 0.000\\
-% This suggests that cobble stone surfaces are associated with a significant decrease in StepSymmetry compared to flat even surfaces ($p < 0.05$).
-% \item grass: Coefficient = -0.0122, p-value = 0.167\\
-% This indicates that grass surfaces have a negligible and non-significant effect on StepSymmetry compared to flat even surfaces ($p > 0.05$).
-% \item slope down: Coefficient = -0.0289, p-value = 0.001\\
-% This shows that slope down surfaces are associated with a significant decrease in StepSymmetry compared to flat even surfaces ($p < 0.05$).
-% \item slope up: Coefficient = -0.0084, p-value = 0.492\\
-% This suggests that slope up surfaces are associated with a decrease in StepSymmetry compared to flat even surfaces, but this effect is not statistically significant ($p > 0.05$).
-% \end{itemize}
-% \end{itemize}
-
-% Stride symmetry (Stride): Compared to flat walking post-hoc Wilcoxen-signed rank tests showed that a banked-left ($\Delta=0.42$) surface increased lower extremity stride symmetry, while cobblestone ($\Delta=0.56$) and sloped-down ($\Delta=0.42$) surfaces decreased symmetry. No other statistical differences were observed.
-% \paragraph{Stride symmetry} 
-% Compared to the flat even surface, bank left ($\beta = 0.04$, $p < 0.01$) and bank right ($\beta = 0.03$, $p = 0.04$) surfaces have significant positive effects on stride symmetry. Cobble stones ($\beta = -0.06$, $p < 0.001$), sloped down ($\beta = -0.04$, $p < 0.001$), and sloped up ($\beta = -0.03$, $p = 0.03$) surfaces prompted a significant decrease in stride symmetry compared to walking on a flat even surface. Grass did not show significant effects compared to walking on a flat even surface. 
-
-% \begin{itemize}
-%     \item Main Effect of Surface (Independent of Sex)
-
-% \item The main effect of surface types is captured by the coefficients for the different surface categories, with flat even as the reference category. Here are the interpretations:
-% \begin{itemize}
-% \item bank left: Coefficient = 0.0407, p-value = 0.002\\
-% This suggests that bank left surfaces are associated with a significant increase in StrideSymmetry compared to flat even surfaces ($p < 0.05$).
-% \item bank right: Coefficient = 0.0260, p-value = 0.038\\
-% This indicates that bank right surfaces are associated with a significant increase in StrideSymmetry compared to flat even surfaces ($p < 0.05$).
-% \item cobble stone: Coefficient = -0.0567, p-value = 0.000\\
-% This suggests that cobble stone surfaces are associated with a significant decrease in StrideSymmetry compared to flat even surfaces ($p < 0.05$).
-% \item grass: Coefficient = -0.0168, p-value = 0.086\\
-% This indicates that grass surfaces have a marginally significant effect on StrideSymmetry compared to flat even surfaces ($p = 0.086$).
-% \item slope down: Coefficient = -0.0416, p-value = 0.000\\
-% This shows that slope down surfaces are associated with a significant decrease in StrideSymmetry compared to flat even surfaces ($p < 0.05$).
-% \item slope up: Coefficient = -0.0332, p-value = 0.033\\
-% This suggests that slope up surfaces are associated with a significant decrease in StrideSymmetry compared to flat even surfaces ($p < 0.05$).
-% \end{itemize}
-% \end{itemize}
-% Short-term Lyapunov Exponent (LyE$_{s}$): Follow up paired t-tests showed that compared to flat walking, cobblestone was the sole surface to prompt a reduction in LYE${_s}$ (i.e., decreased step to step stability) with a medium effect ($d=0.47$). No other statistical differences were observed.
-% \paragraph{Short term LyE} Our GEE model showed that compared to flat walking, the cobble stone surface ($\beta = -0.11$, $p < 0.01$) significantly decreased short term LyE. Sloped up ($\beta = 0.09$, $p = 0.03$) walking was associated with a significant increase in short term LyE. 
-% This indicates that cobble stone surfaces decreased step to step variability whereas sloped up walking increased it. No other statistical differences were observed
-
-% \begin{itemize}
-%     \item Main Effect of Surface (Independent of Sex)
-% \item The main effect of surface types is captured by the coefficients for the different surface categories, with flat even as the reference category. Here are the interpretations:
-% \begin{itemize}
-%     \item bank left: Coefficient = -0.0113, p-value = 0.841\\
-%     This suggests that bank left surfaces are associated with a decrease in LyE s compared to flat even surfaces, but this effect is not statistically significant ($p > 0.05$).
-%     \item bank right: Coefficient = -0.0348, p-value = 0.572\\   
-%     This indicates that bank right surfaces are associated with a decrease in LyE s compared to flat even surfaces, but this effect is not statistically significant ($p > 0.05$).
-%     \item cobble stone: Coefficient = -0.1121, p-value = 0.007\\   
-%     This suggests that cobble stone surfaces are associated with a significant decrease in LyE s compared to flat even surfaces ($p < 0.05$).
-%     \item grass: Coefficient = -0.0618, p-value = 0.302\\    
-%     This indicates that grass surfaces have a negligible and non-significant effect on LyE s compared to flat even surfaces ($p > 0.05$).
-%     \item slope down: Coefficient = 0.0120, p-value = 0.807\\    
-%     This shows that slope down surfaces are associated with an increase in LyE s compared to flat even surfaces, but this effect is not statistically significant ($p > 0.05$).
-%     \item slope up: Coefficient = 0.0932, p-value = 0.032\\    
-%     This suggests that slope up surfaces are associated with a significant increase in LyE s compared to flat even surfaces ($p < 0.05$).
-% \end{itemize}
-    
-% \end{itemize}
-
-
-% Long-term Lyapunov Exponent (LyE${_l}$): Compared to flat walking pairwise t-tests showed that banked-left, sloped-down, and sloped-up prompted an increase in LyE${_l}$ (i.e., increased complexity and chaos) with medium to large effects ($d=1.09$, $d=0.74$, $d=0.65$, respectively). No other statistical differences were observed. 
-% \paragraph{Long term LyE} Compared to flat walking, all surfaces, except cobble stones significantly increased the long term LyE, bank left ($\beta = 0.03$, $p < 0.001$), bank right ($\beta = 0.02$, $p = 0.01$), grass ($\beta = 0.01$, $p = 0.05$), slope down ($\beta = 0.02$, $p < 0.01$), and slope up ($\beta = 0.02$, $p < 0.01$). These results indicate an increased complexity and chaos. The cobble stone surface, was only marginally non-significant ($\beta = 0.01$, $p = 0.06$)
-
-
-% \begin{itemize}
-%     \item Main Effect of Surface (Independent of Sex)
-
-% \item The main effect of surface types is captured by the coefficients for the different surface categories, with flat even as the reference category. Here are the interpretations:
-% \begin{itemize}
-% \item bank left: Coefficient = 0.0264, p-value = 0.000\\
-% This suggests that bank left surfaces are associated with a significant increase in LyE l compared to flat even surfaces ($p < 0.05$).
-% \item bank right: Coefficient = 0.0179, p-value = 0.005\\
-% This indicates that bank right surfaces are associated with a significant increase in LyE l compared to flat even surfaces ($p < 0.05$).
-% \item cobble stone: Coefficient = 0.0104, p-value = 0.062\\
-% This suggests that cobble stone surfaces are associated with an increase in LyE l compared to flat even surfaces, but this effect is marginally significant ($p = 0.062$).
-% \item grass: Coefficient = 0.0133, p-value = 0.045\\
-% This indicates that grass surfaces are associated with a significant increase in LyE l compared to flat even surfaces ($p < 0.05$).
-% \item slope down: Coefficient = 0.0183, p-value = 0.002\\
-% This shows that slope down surfaces are associated with a significant increase in LyE l compared to flat even surfaces ($p < 0.05$).
-% \item slope up: Coefficient = 0.0160, p-value = 0.002\\
-% This suggests that slope up surfaces are associated with a significant increase in LyE l compared to flat even surfaces ($p < 0.05$).
-% \end{itemize}
-% \end{itemize}
-
 No significant main effects of sex on gait dynamics was found. Notably, a non-significant trend suggested a 13.7\% decrease in step-to-step variability (LyE${_s}$) in males compared to females.
-
-% \begin{itemize}
-%     \item[Sample entropy]
-% The main effect of sex is captured by the coefficient for Sex (Male):
-% Sex (Male): Coefficient = -0.0316, p-value = 0.721
-% This indicates that being male is associated with a decrease in SampleEntropyDelay compared to being female, but this effect is not statistically significant ($p > 0.05$).
-% \item The effect of sex on SampleEntropyDelay is not significant, indicating that there is no substantial difference between males and females in this context.
-
-% \item[LDLJ]
-% The main effect of sex is captured by the coefficient for Sex (Male):
-% Sex (Male): Coefficient = -0.0122, p-value = 0.553
-% This indicates that being male is associated with a decrease in LDLJ compared to being female, but this effect is not statistically significant ($p > 0.05$).
-% \item The effect of sex on LDLJ is not significant, indicating that there is no substantial difference between males and females in this context.
-
-% \item[step]
-% The main effect of sex is captured by the coefficient for Sex (Male):
-% Sex (Male): Coefficient = 0.0167, p-value = 0.655
-% This indicates that being male is associated with an increase in StepSymmetry compared to being female, but this effect is not statistically significant ($p > 0.05$).
-% \item  The effect of sex on StepSymmetry is not significant, indicating that there is no substantial difference between males and females in this context.
-
-% \item[stride]
-% The main effect of sex is captured by the coefficient for Sex (Male):
-
-% Sex (Male): Coefficient = 0.0276, p-value = 0.526
-% This indicates that being male is associated with an increase in StrideSymmetry compared to being female, but this effect is not statistically significant ($p > 0.05$).
-% \item The effect of sex on StrideSymmetry is not significant, indicating that there is no substantial difference between males and females in this context.
-
-% \item[LyE s]
-% The main effect of sex is captured by the coefficient for Sex (Male):
-
-% Sex (Male): Coefficient = -0.1475, p-value = 0.180
-% This indicates that being male is associated with a decrease in LyE s compared to being female, but this effect is not statistically significant ($p > 0.05$).
-% \item The effect of sex on LyE s is not significant, indicating that there is no substantial difference between males and females in this context.
-
-% \item[LyE l]
-% The main effect of sex is captured by the coefficient for Sex (Male):
-
-% Sex (Male): Coefficient = 0.0077, p-value = 0.210
-% This indicates that being male is associated with an increase in LyE l compared to being female, but this effect is not statistically significant ($p > 0.05$).
-% \item The effect of sex on LyE l is not significant, indicating that there is no substantial difference between males and females in this context.
-
-    
-% \end{itemize}
-
-% There was a main effect of sex ($p=0.011$) on short term Lyapunov exponent. Compared to men, women had greater LyE${_s}$ (i.e., increased step to step variability), independent of walking surfaces with a large effect ($\eta_{p}^{2}=0.217$). No other statistical differences were observed ($p>=0.174$).
 
 Significant surface $\times$ sex interactions were found for sample entropy and stride regularity on banked right surfaces. 
 Bank right surface and being male significantly increased Sample Entropy. The female participants decreased their sample entropy by roughly 9.6\% when walking on a banked right surface indicating a loss of complexity, whereas our male participants increased their sample entropy by approximately 0.5\%. 
@@ -340,8 +143,9 @@ Bank right surface and being male significantly increased Sample Entropy. The fe
 For stride symmetry, the male group increased their stride symmetry by 0.88\% compared to an increase in stride symmetry for our female participants of 3.77\%. 
 No other significant interaction effects were found. Detailed percentage change are shown in Table~\ref{tab:interaction-gee} and Table~\ref{tab:GEE-perc} 
 
-\begin{figure}
-        \includegraphics[width=0.90\textwidth]{results.png} 
+\begin{figure}[t]
+\vspace*{-3.5cm}
+        \includegraphics[width=0.9 \textwidth]{Figure1.jpg} 
     \caption{Rain-cloud plots of the gait dynamic variables (dimensionless quantities) on the different surfaces compared to the reference surface, flat even in forest green/darker. Each dot represents an individual (purple/dark = female, yellow/light = male), the half violin plots show the projected distribution. Mean $\pm$ 95\% confidence interval are displayed. All surfaces are compared to the flat walking surface. Significant differences ($p \leq 0.05$) with flat even walking are indicated by the black bars above the graph.}
     \label{fig:raincloud-results}
 \end{figure}
@@ -444,42 +248,6 @@ Female &	-5.38&	\multirow{2}{*}{0.70}	&1.32&	\multirow{2}{*}{0.95}&	-0.05&	\mult
     \clearpage% Flush page
 }
 
-
-
-
-
-
-% \begin{table}
-% \scriptsize
-% \centering
-
-% \begin{tabular}{llllllll}
-
-%                             &             & \textbf{SE}        & \textbf{LDLJ}      & \textbf{Step}                  & \textbf{Stride}            & \textbf{LyE$_{s}$} & \textbf{LyE$_{l}$} \\ \hline
-% \textbf{Fl - BL}            & Mean diff   & 0.002              & -0.133             & 0.015                          & \textbf{0.032}             & -0.012              & \textbf{0.027}      \\
-%                             & 95 \% CI    & {[}-0.019, 0.023]  & {[}-0.231, -0.035] & {[}-0.002, 0.032]              & {[}0.011, 0.053]           & {[}-0.102, 0.078]   & {[}0.013, 0.041]    \\
-%                             & Effect size & $d=0.02$             & $d=0.27$             & $\Delta=0.23$ & $\Delta=0.42$ & $d=0.05$              & $d=1.09$              \\[0.10cm]
-% \textbf{Fl - BR} & Mean diff   & -0.002             & \textbf{-0.225}    & 0.018                          & 0.021                      & -0.026              & 0.018               \\
-%                             & 95 \% CI    & {[}-0.024, 0.020]  & {[}-0.318, -0.132] & {[}0.003, 0.033]               & {[}0.001, 0.041]           & {[}-0.130, 0.078]   & {[}0.005, 0.031]    \\
-%                             & Effect size & $d=0.02$             & $d=0.45$             & $\Delta=0.27$ & $\Delta=0.27$ & $d=0.10$              & $d=0.70$              \\[0.10cm]
-% \textbf{Fl - CS}  & Mean diff   & -0.008             & \textbf{-0.363}    & \textbf{-0.044}                & \textbf{-0.043}            & \textbf{-0.097}     & 0.010               \\
-%                             & 95 \% CI    & {[}-0.022, 0.006]  & {[}-0.451, -0.275] & {[}-0.057, -0.031]             & {[}-0.060, -0.026]         & {[}-0.163, -0.031]  & {[}-0.001, 0.021]   \\
-%                             & Effect size & $d=0.09$             & $d=0.82$             & $\Delta=0.66$ & $\Delta=0.56$ & $d=0.47$              & $d=0.42$             \\[0.10cm]
-% \textbf{Fl - Gr}  & Mean diff   & -0.020             & \textbf{-0.283}    & -0.010                         & -0.013                     & -0.053              & 0.013               \\
-%                             & 95 \% CI    & {[}-0.044, 0.004]  & {[}-0.420, -0.146] & {[}-0.024, 0.004]              & {[}-0.028, 0.002]          & {[}-0.151, 0.045]   & {[}0.000, 0.026]    \\
-%                             & Effect size & $d=0.23$             & $d=0.55$             & $\Delta=0.15$ & $\Delta=0.17$ & $d=0.24$              & $d=0.54$              \\[0.10cm]
-% \textbf{Fl - SD}  & Mean diff   & \textbf{-0.069 }   & \textbf{-0.619}    & \textbf{-0.024 }               & \textbf{ -0.032}           & 0.011               & \textbf{0.018}      \\
-%                             & 95 \% CI    & {[}-0.093 - 0.045] & {[}-0.761, -0.477] & {[}-0.039, -0.009]             & {[}-0.049, -0.015]         & {[}-0.075, 0.097]   & {[}0.006, 0.030]    \\
-%                             & Effect size & $d=0.81$             & $d=1.31$             & $\Delta=0.36$ & $\Delta=0.42$ & $d=0.04$              & $d=0.74$              \\[0.10cm]
-% \textbf{Fl - SU}  & Mean diff   & 0.012              & -0.168             & -0.007                         & -0.026                     & 0.076               & \textbf{0.016}      \\
-%                             & 95 \% CI    & {[}-0.017, 0.041]  & {[}-0.313, -0.023] & {[}-0.027, 0.013]              & {[}-0.050, -0.002]         & {[}-0.003, 0.155]   & {[}0.006, 0.026]    \\
-%                             & Effect size & $d=0.14$             & $d=0.33$             & $\Delta=0.11$ & $\Delta=0.34$ & $d=0.36$              & $d=0.65$       \\ \cline{1-8}        
-% \end{tabular}
-% \caption{Results for the mean difference (mean diff), 95\% confidence intervals, and effect sizes (Cohen's $d$ and Glass's $\Delta$) between flat even walking and other surfaces. Mean differences that coincide with an significant results are in bold. Abbreviations columns: SE = Sample Entropy; LDLJ = log dimensionless Jerk; Step = Step symmetry; Stride = Stride symmetry; LyE${_s}$ = Short term Lyapunov exponent; LyE${_l}$ = Long term Lyapunov exponent. Abbreviations rows: Fl = Flat even; BL = Banked Left; BR = Banked Right; CS = Cobble Stones; Gr = Grass; SD = Sloped Down; SU = Sloped Up.}
-% \label{tab:effect-sizes}
-% \end{table}
-
-
 \section{Discussion}
 \label{disc}
 
@@ -492,43 +260,24 @@ Movement smoothness, quantified by LDLJ, was highly sensitive to surface, with a
 Surprisingly, only cobble stones and sloped up surfaces impacted dynamic stability as calculated with the short term Lyapunov exponent, partially corroborating \cite{vieira_gait_2017} during inclined treadmill walking.
 We found more differences in the long term Lyapunov exponent compared to the short term, with all surfaces showing an increased complexity and chaos. Further work is needed to fully understand the dynamics of outdoor walking, with a focus on movement smoothness (LDLJ), stride-to-stride fluctuations and complexity (LyE$_{l}$), and symmetry. 
 
-% To the best of our knowledge, there are two other papers~\citep{ippersiel_impact_2022, dixon2021effects} that used a wide range of outdoor surfaces to investigate the surface effects on human walking biomechanics. Most other research has been conducted in laboratory settings using limited artificial surfaces and short gait distances or treadmills. As Svenningsen et al., \citep{svenningsen_narrative_2020} and Benson et al., \citep{benson2022real} pointed out, there is a lack of research on running and walking in natural environments. Additionally, most research that assesses dynamic stability focuses on average stride events, implicitly assuming that each stride is independent and that variation is random \citep{svenningsen_narrative_2020}. This assumption is flawed and incomplete, and a healthy system exhibits optimal movement variability and dynamic stability \citep{stergiou_human_2011}, with deviations from this range resulting in reduced adaptability to perturbations. This is also highlighted by our results, that showed deviations in gait dynamics on banked and grass surfaces compared to flat even walking, that were previously not found to induce changes using the same data set\citep{ippersiel_impact_2022}, using linear metrics (i.e., coordination variability). This shows the added benefit of incorporating non-linear gait dynamics to the previously used linear metrics. From our results, we might conclude that movement smoothness and stride-to-stride fluctuations and complexity were most affected by surface change. The importance of measuring movement smoothness has also been highlighted by Kiely et al~\citep{kiely_smoothness_2019} as a feature of healthy, proficient movement; however, the implications of this finding in the context of surface navigation remains unclear. 
-
 \subsection{Sex effects}
-%To the best of our knowledge, we are  the first to explore differences in non-linear gait dynamics in males and females during outdoor walking. 
 Contrary to our second hypothesis, no statistically significant between-sex differences were found, independent of surface. We observed a non-significant reduction of 13\%  in LyE${_s}$ for males, independent of walking surface. Previous work has linked the LyE${_s}$ to fall risk and knee osteoarthritis disease state~\citep{bruijn2013assessing, emmerzaal_movement_2022}; however, 
-%People with a higher fall risk showed an increased LyE$_{s}$ ~\citep{bruijn2013assessing}; whereas people with knee osteoarthritis showed lower LyE$_{s}$ values ~\citep{emmerzaal_movement_2022}. These seemingly conflicting results indicate that, 
+
 based on this data set and our current results, we cannot comment on the meaning of these lower LyE$_{s}$ values. 
 
 \subsection{Surface $\times$ Sex effects}
 Our third hypothesis was confirmed, with interactions observed for some metrics. The significant interaction between banked right surface and sex for sample entropy (females decreased and males increased), suggests that females (males) respond to this change with adaptations linked to a less (more) adaptable gait pattern with respect to performing step-to-step adjustments to regulate balance control~\citep{tochigi2012entropy, Zhang2013comprehensive}. Further indication that females adopt a more predictable and regular movement pattern is in the interaction between banked right surface and sex for stride symmetry. Females increased and males decreased their stride symmetry suggesting that females (males) adopt a more (less) regular movement pattern.
-Moreover, the interaction between sloped down walking and sex, although not statistically significant, suggests a practical difference in how sloped down walking affects LyE${_s}$ between males and females. %This warrants further investigation. 
+Moreover, the interaction between sloped down walking and sex, although not statistically significant, suggests a practical difference in how sloped down walking affects LyE${_s}$ between males and females. 
 
 
 \subsection{Limitations}
 This study has limitations that warrant discussion. First, walking speed was not controlled, which may influence gait dynamics; however, we mitigated this by using a consistent step count per participant across surfaces. Second, while we observed sex interaction effects, identifying their origin was not a primary aim of the dataset, making post-hoc in-depth analysis difficult. Future research should explore whether these differences are inherent to sex or influenced by other factors. For example, breast motion is known to alter pelvis, trunk, and lower limb kinematics during exercise~\citep{mcghee2020breast, fong2022greater, milligan2015influence}, thus potentially driving non-linear dynamics that we observed herein measured at the lower trunk level. Third, trials were concatenated into a single time series, which may introduce variance; however, since this method was applied uniformly, its impact on conclusions may be minimal. Fourth, the sample consisted of  university aged young adults, limiting generalizability to other populations. Finally, some participants (primarily male) could be classified as overweight via the BMI metric. We controlled for height and weight to help minimize bias; however, future work should investigate the impact of body composition and fitness level on outdoor walking.
 
 \section{Conclusions} 
-This study investigated the impact of various outdoor surfaces on gait dynamics and explored potential sex differences in these dynamics. %Using non-linear dynamics metrics , we found that different surfaces significantly affect gait dynamics, including predictability, smoothness, symmetry, and stability. 
-Even though all participants were able to navigate these surfaces with success (e.g. no falls, or disruption of gait), all conditions, especially banked right, cobble stones, and sloped down, induced changes in non-linear walking dynamics, as derived from lower trunk accelerations, compared to flat walking. These surfaces prompted a deterioration of movement smoothness, altered symmetry, increased chaos and more stride-to-stride fluctuation, suggesting the need for a higher level of motor skill \citep{kiely_smoothness_2019, balasubramanian_analysis_2015, terrier2018maximum}. %The physiological significance and source of these results, however, should be studied further. For example, it is known that %Despite the small sample size (14 females and 15 males), these findings suggest movement data for males and females are not identical. 
-
-%These differences might suggest that males and females use different strategies to maintain stability, implying that normative values for gait dynamics in one sex may not be directly applicable to the other. 
-
-
-
-% and altered step and stride symmetry. 
-
-%Banked right, cobblestone, and sloped-down surfaces had substantial impact on these metrics.
-%While no significant sex differences were observed, a trend suggested that males exhibited lower LyE${_s}$ compared to females, indicating less step-to-step variability. 
-%Significant interactions between surface type and sex were found for Sample Entropy and stride symmetry, particularly on banked right surfaces.
+This study investigated the impact of various outdoor surfaces on gait dynamics and explored potential sex differences in these dynamics. 
+Even though all participants were able to navigate these surfaces with success (e.g. no falls, or disruption of gait), all conditions, especially banked right, cobble stones, and sloped down, induced changes in non-linear walking dynamics, as derived from lower trunk accelerations, compared to flat walking. These surfaces prompted a deterioration of movement smoothness, altered symmetry, increased chaos and more stride-to-stride fluctuation, suggesting the need for a higher level of motor skill \citep{kiely_smoothness_2019, balasubramanian_analysis_2015, terrier2018maximum}.
 
 Our results highlight the need for more data collection in outdoor setting to fully capture the demands of various surfaces on gait dynamics of females and males. Greater consideration of sex differences in gait studies is necessary to enhance understanding of movement adaptation strategies. Future research should explore the physiological implications of these findings and extend analyses to clinical populations.
-
-%These findings highlight the importance of considering both surface and sex in gait dynamics research.
-
-
-
-
 
 \section*{Acknowledgements}
 We would like to thank Elodie Drew for her insights in the creation of the figures. This work was funded by the Fonds de Recherche du Qu\'ebec (FRQ) Québec-Luxembourg intersectorial AUDACE program (315603). Jill Emmerzaal was additionally supported by G-Research, Grants for PhD students and Post-Docs in quantitative fields.
@@ -538,7 +287,7 @@ The authors declare no conflicts of interest.
 
 \section*{Data and code availability}
 We used a publicly available data set from \citet{luo_database_2020}. The code associated with this study can be found at: \\
-https://github.com/jillemmerzaal/nld-outdoor-surfaces
+https://github.com/mcgillmotionlab/non\_linear\_dynamics\_outdoor\_surfaces.git
 
 
 \bibliographystyle{elsarticle-harv} 
