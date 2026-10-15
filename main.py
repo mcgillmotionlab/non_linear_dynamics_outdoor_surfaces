@@ -23,18 +23,20 @@ data_file = os.path.join(fld_root, 'data.json.zip')
 fld = os.path.join(fld_root, 'data')  # Setting path for processed data
 fld_stats = os.path.join(fld_root, 'Results')
 
-
-
-
-
-
-
-os.makedirs(fld)
-print(f'Unzipping data file {data_file}')
-with zipfile.ZipFile(data_file, 'r') as zip_ref:
-    zip_ref.extractall(fld_root)
-# move data file to data folder
-shutil.move("data.json", "data/data.json")
+os.makedirs(fld, exist_ok=True)
+zoo_files = engine(path=fld, extension=".zoo")
+if zoo_files:
+    print('Existing zoo files found; skipping data extraction and zoo file creation...')
+else:
+    extracted_data = os.path.join(fld, "data.json")
+    source_data = os.path.join(fld_root, "data.json")
+    if not os.path.exists(extracted_data):
+        if not os.path.exists(source_data):
+            print(f'Unzipping data file {data_file}')
+            with zipfile.ZipFile(data_file, 'r') as zip_ref:
+                zip_ref.extractall(fld_root)
+        # Move the extracted JSON into the data folder.
+        shutil.move(source_data, extracted_data)
 
 # Remove old stats folder if it exists
 if os.path.exists(fld_stats):
@@ -44,11 +46,13 @@ if os.path.exists(fld_stats):
 print('Creating folder for Excel sheet output...')
 os.makedirs(fld_stats)
 
-# restructure the data from the json dictionary into seperate files.
-outdoor2zoo(fld)
+# restructure the data from the json dictionary into separate files.
+if not zoo_files:
+    outdoor2zoo(fld)
 
 # %% Step 2: re-organize data in folders
 fl = engine(path=fld, extension=".zoo")
+organized_files = set()
 for f in fl:
     file_path, file_name, ext = fileparts(f)
 
@@ -61,14 +65,19 @@ for f in fl:
     if not os.path.exists(nfld):
         os.makedirs(nfld)
 
-    # move file to new directory
+    # Leave files already in their subject/condition directory in place.
     new_file_path = os.path.join(nfld, file_name + ext)
-    print(f'moving {file_name}{ext} to {nfld}')
-    shutil.move(f"{file_name}{ext}", nfld)
+    if os.path.abspath(f) != os.path.abspath(new_file_path):
+        if os.path.exists(new_file_path):
+            print(f'{file_name}{ext} already exists in {nfld}; skipping duplicate...')
+        else:
+            print(f'moving {file_name}{ext} to {nfld}')
+            shutil.move(f, new_file_path)
+    organized_files.add(new_file_path)
 # %% Step 3: Non-linear dynamics analysis
 
 # prepare files
-fl = engine(path=fld, extension=".zoo")
+fl = list(organized_files)
 fl.sort()
 
 for f in fl:

@@ -5,7 +5,7 @@ import EntropyHub as EH
 import statsmodels.tsa.stattools as stattools
 
 
-# some hard coded variables
+# some hardcoded variables
 # Yentes, J. M., Hunt, N., Schmid, K. K., Kaipust, J. P., McGrath, D., & Stergiou, N. (2013).
 # The appropriate use of approximate entropy and sample entropy with short data sets.
 # Annals of biomedical engineering, 41, 349-365.
@@ -25,4 +25,4 @@ def sample_entropy_delay(data, ch, **kwargs):
     TAU = np.argmax(autocorr < drop_value)
     Samp, A, B = EH.SampEn(Sig=norm, m=DIM, tau=int(TAU), r=None)
 
-    return Samp, norm
+    return Samp.tolist(), norm

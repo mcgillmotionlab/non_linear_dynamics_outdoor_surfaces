@@ -57,7 +57,7 @@ def outdoor2zoo(fld):
             fname = "{0}_{1}.zoo".format(s, c)
             print("creating zoo file for {0}".format(fname))
             evts = r[c][s]['last_step_index']
-            print(evts)
+            # print(evts)
             data = {}
             data['zoosystem'] = setZoosystem(fname)
             data['zoosystem']['Units'] = {}
